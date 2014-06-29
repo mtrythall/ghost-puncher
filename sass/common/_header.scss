@@ -57,8 +57,12 @@
 
 .social-nav a {
   @include inline-block;
-  margin-right: rhythm(.75);
+  margin-right: rhythm(1);
   font-size: 1.3rem;
+
+  &:hover {
+    color: darken($brand-color, 10%);
+  }
 
   &:last-of-type {
     margin-right: 0;

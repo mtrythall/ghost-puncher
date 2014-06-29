@@ -21,12 +21,15 @@ body {
   background-color: whitesmoke;
 }
 
-.article-title {
+.article-header {
   @extend %container;
 
   @include padding-leader(2);
   @include padding-trailer(2);
   text-align: center;
+}
+
+.article-header h1 {
   font-weight: 800;
 }
 

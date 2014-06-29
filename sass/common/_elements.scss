@@ -3,6 +3,13 @@
  *
  */
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
 .main img {
   max-width: 100%;
 }

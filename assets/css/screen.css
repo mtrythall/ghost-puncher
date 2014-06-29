@@ -765,12 +765,12 @@ blockquote:before {
  *
  */
 /* line 6, ../../sass/common/_layout.scss */
-.container, .article-title, .main .container {
+.container, .article-header, .main .container {
   padding: 0 1rem;
 }
 @media (min-width: 840px) {
   /* line 6, ../../sass/common/_layout.scss */
-  .container, .article-title, .main .container {
+  .container, .article-header, .main .container {
     width: 760px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -783,16 +783,20 @@ body {
 }
 
 /* line 24, ../../sass/common/_layout.scss */
-.article-title {
+.article-header {
   padding-top: 60px;
   padding-top: 2.72727rem;
   padding-bottom: 60px;
   padding-bottom: 2.72727rem;
   text-align: center;
+}
+
+/* line 32, ../../sass/common/_layout.scss */
+.article-header h1 {
   font-weight: 800;
 }
 
-/* line 33, ../../sass/common/_layout.scss */
+/* line 36, ../../sass/common/_layout.scss */
 .main .container {
   background-color: white;
   padding: 1rem 1.5rem;
@@ -802,12 +806,17 @@ body {
  * ELEMENTS
  *
  */
-/* line 6, ../../sass/common/_elements.scss */
+/* line 7, ../../sass/common/_elements.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 13, ../../sass/common/_elements.scss */
 .main img {
   max-width: 100%;
 }
 
-/* line 10, ../../sass/common/_elements.scss */
+/* line 17, ../../sass/common/_elements.scss */
 hr {
   height: 1px;
   border: none;
@@ -893,16 +902,20 @@ hr {
 .social-nav a {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 1.02273rem;
+  margin-right: 1.36364rem;
   font-size: 1.3rem;
 }
 /* line 63, ../../sass/common/_header.scss */
+.social-nav a:hover {
+  color: #004c99;
+}
+/* line 67, ../../sass/common/_header.scss */
 .social-nav a:last-of-type {
   margin-right: 0;
 }
 
 @media (min-width: 840px) {
-  /* line 68, ../../sass/common/_header.scss */
+  /* line 72, ../../sass/common/_header.scss */
   .site-header .site-title,
   .site-header .social-nav {
     position: absolute;
@@ -920,6 +933,17 @@ hr {
   padding-top: 2.72727rem;
   padding-bottom: 60px;
   padding-bottom: 2.72727rem;
-  background: #a3a3a3;
+  background: #303030;
+  text-align: center;
   color: white;
+}
+/* line 87, ../../sass/utils/_mixins.scss */
+.site-footer > *:last-child {
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+}
+
+/* line 16, ../../sass/common/_footer.scss */
+.site-footer a {
+  color: tomato;
 }

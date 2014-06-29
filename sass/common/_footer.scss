@@ -6,6 +6,13 @@
 .site-footer {
   @include padding-leader(2);
   @include padding-trailer(2);
-  background: lighten($text-color, 30%);
+  background: darken($text-color, 15%);
+  text-align: center;
   color: white;
+
+  @include bottomless;
+}
+
+.site-footer a {
+  color: tomato;
 }
