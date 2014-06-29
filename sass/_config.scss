@@ -1,0 +1,59 @@
+/*
+ *  CONFIGURATION
+ *
+ *  Global configuration for the site. Organized by area of concern.
+ */
+
+/* TYPOGRAPHY */
+
+// Overrides Normalize
+$base-font-family: 'Source Sans Pro','Helvetica Neue',sans-serif;
+
+/*
+  NOTE: We want slightly larger text than normal, but we want to use
+  rems for spacing so spacing is always consistent. EMs would ensure that
+  are spacing is dependent upon sizing set per component, which is annoying.
+
+  Here are resources to learn about how all of this works:
+
+  * http://compass-style.org/reference/compass/typography/vertical_rhythm/
+  * http://www.zell-weekeat.com/compass-vertical-rhythm/ (more resources at bottom)
+
+  You can use @include debug-vertical-alignment(); (from Compass) to see the baselines.
+  Add this to html {}, or just see vendor/_normalize.scss
+*/
+$base-font-size: 22px;
+$base-line-height: 30px;
+$rhythm-unit: 'rem';
+$strict-normalize: false; // We don't need to match Normalize.css exactly
+
+$icon-font: 'FontAwesome';
+
+/*
+  PALETTE
+*/
+
+$gray: #A0A0A0;
+
+// Assignments
+$text-color: #565656;
+
+
+/* STYLE GLOBALS */
+$btn-bottom-width: 4px;
+$border-radius: 2px;
+$shadow-border-size: 4px;
+
+/* GRID + BREAKPOINTS */
+
+
+/* MISC */
+$browser-minimum-versions: (
+  'chrome':  null,
+  'firefox': null,
+  'ie':      '10',
+  'safari':  null,
+  'opera':   null
+);
+
+$md-display: 840px;

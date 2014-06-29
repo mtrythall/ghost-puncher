@@ -1,0 +1,11 @@
+/*
+ * FOOTER
+ *
+ */
+
+.site-footer {
+  @include padding-leader(2);
+  @include padding-trailer(2);
+  background: lighten($text-color, 30%);
+  color: white;
+}

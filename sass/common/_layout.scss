@@ -1,0 +1,37 @@
+/*
+ * LAYOUT
+ *
+ */
+
+%container {
+  padding: 0 1rem;
+
+  @include breakpoint($md-display) {
+    width: 760px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.article-title {
+  @extend %container;
+
+  @include padding-leader(2);
+  @include padding-trailer(2);
+  text-align: center;
+  font-weight: 800;
+}
+
+.main .container {
+  @extend %container;
+  background-color: white;
+  padding: 1rem 1.5rem;
+}
