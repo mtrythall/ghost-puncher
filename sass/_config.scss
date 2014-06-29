@@ -8,6 +8,7 @@
 
 // Overrides Normalize
 $base-font-family: 'Source Sans Pro','Helvetica Neue',sans-serif;
+$code-font-family: 'Source Code Pro',monospace, serif;
 
 /*
   NOTE: We want slightly larger text than normal, but we want to use
@@ -34,10 +35,13 @@ $icon-font: 'FontAwesome';
 */
 
 $gray: #A0A0A0;
+$light-gray: #CCC;
 
 // Assignments
 $text-color: #565656;
 $brand-color: #0066CC;
+
+$footer-bg-color: darken($text-color, 15%);
 
 /* STYLE GLOBALS */
 $btn-bottom-width: 4px;

@@ -6,7 +6,7 @@
 .site-footer {
   @include padding-leader(2);
   @include padding-trailer(2);
-  background: darken($text-color, 15%);
+  background: $footer-bg-color;
   text-align: center;
   color: white;
 
@@ -15,4 +15,23 @@
 
 .site-footer a {
   color: tomato;
+}
+
+.site-footer .rss-icon {
+  @include inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  color: $footer-bg-color;
+
+  i {
+    vertical-align: middle;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+}
+
+.site-footer .copyright {
+  @include leader(1);
 }

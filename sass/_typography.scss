@@ -57,6 +57,13 @@ code {
   white-space: pre;
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: $code-font-family;
+}
+
 abbr {
   // https://developer.mozilla.org/en-US/docs/CSS/font-variant
   font-variant: small-caps;

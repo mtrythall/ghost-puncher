@@ -1,0 +1,24 @@
+/*
+ * ARTICLE VIEW
+ *
+ * Styles specific to the article view
+ *
+ */
+
+.article-header {
+  @extend %container;
+
+  @include padding-leader(2);
+  @include padding-trailer(2);
+  text-align: center;
+}
+
+.article-header h1 {
+  font-weight: 800;
+}
+
+.article-body {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+}

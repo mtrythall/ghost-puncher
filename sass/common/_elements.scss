@@ -4,6 +4,8 @@
  */
 
 a {
+  color: darken($brand-color, 10%);
+
   &:hover {
     text-decoration: none;
   }
@@ -17,5 +19,5 @@ a {
 hr {
   height: 1px;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $light-gray;
 }

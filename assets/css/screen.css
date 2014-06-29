@@ -686,6 +686,14 @@ code {
 }
 
 /* line 60, ../../sass/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Source Code Pro", monospace, serif;
+}
+
+/* line 67, ../../sass/_typography.scss */
 abbr {
   font-variant: small-caps;
   font-weight: 600;
@@ -693,17 +701,17 @@ abbr {
   color: #a0a0a0;
 }
 
-/* line 68, ../../sass/_typography.scss */
+/* line 75, ../../sass/_typography.scss */
 abbr[title]:hover {
   cursor: help;
 }
 
-/* line 72, ../../sass/_typography.scss */
+/* line 79, ../../sass/_typography.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 76, ../../sass/_typography.scss */
+/* line 83, ../../sass/_typography.scss */
 blockquote:before {
   content: "\201C";
   display: inline-block;
@@ -765,12 +773,12 @@ blockquote:before {
  *
  */
 /* line 6, ../../sass/common/_layout.scss */
-.container, .article-header, .main .container {
+.container, .article-header {
   padding: 0 1rem;
 }
 @media (min-width: 840px) {
   /* line 6, ../../sass/common/_layout.scss */
-  .container, .article-header, .main .container {
+  .container, .article-header {
     width: 760px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -783,20 +791,6 @@ body {
 }
 
 /* line 24, ../../sass/common/_layout.scss */
-.article-header {
-  padding-top: 60px;
-  padding-top: 2.72727rem;
-  padding-bottom: 60px;
-  padding-bottom: 2.72727rem;
-  text-align: center;
-}
-
-/* line 32, ../../sass/common/_layout.scss */
-.article-header h1 {
-  font-weight: 800;
-}
-
-/* line 36, ../../sass/common/_layout.scss */
 .main .container {
   background-color: white;
   padding: 1rem 1.5rem;
@@ -806,21 +800,25 @@ body {
  * ELEMENTS
  *
  */
-/* line 7, ../../sass/common/_elements.scss */
+/* line 6, ../../sass/common/_elements.scss */
+a {
+  color: #004c99;
+}
+/* line 9, ../../sass/common/_elements.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 13, ../../sass/common/_elements.scss */
+/* line 15, ../../sass/common/_elements.scss */
 .main img {
   max-width: 100%;
 }
 
-/* line 17, ../../sass/common/_elements.scss */
+/* line 19, ../../sass/common/_elements.scss */
 hr {
   height: 1px;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 
 /*
@@ -946,4 +944,52 @@ hr {
 /* line 16, ../../sass/common/_footer.scss */
 .site-footer a {
   color: tomato;
+}
+
+/* line 20, ../../sass/common/_footer.scss */
+.site-footer .rss-icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: white;
+  color: #303030;
+}
+/* line 28, ../../sass/common/_footer.scss */
+.site-footer .rss-icon i {
+  vertical-align: middle;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+}
+
+/* line 35, ../../sass/common/_footer.scss */
+.site-footer .copyright {
+  margin-top: 30px;
+  margin-top: 1.36364rem;
+}
+
+/*
+ * ARTICLE VIEW
+ *
+ * Styles specific to the article view
+ *
+ */
+/* line 8, ../../sass/views/_article.scss */
+.article-header {
+  padding-top: 60px;
+  padding-top: 2.72727rem;
+  padding-bottom: 60px;
+  padding-bottom: 2.72727rem;
+  text-align: center;
+}
+
+/* line 16, ../../sass/views/_article.scss */
+.article-header h1 {
+  font-weight: 800;
+}
+
+/* line 21, ../../sass/views/_article.scss */
+.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
+  font-weight: 600;
 }
