@@ -11,27 +11,56 @@
   color: white;
 
   @include bottomless;
+
+  .container {
+    @include clear;
+  }
 }
 
 .site-footer a {
   color: tomato;
 }
 
+.site-footer .aux-footer {
+  @include breakpoint($md-display) {
+    float: right;
+  }
+}
+
+.site-footer .primary-footer {
+  @include breakpoint($md-display){
+    float: left;
+    width: 60%;
+    text-align: left;
+
+    .copyright {
+      @include leader(0);
+    }
+  }
+}
+
 .site-footer .rss-icon {
+  $rss-icon-size: 2.2rem;
+
   @include inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: $rss-icon-size;
+  width: $rss-icon-size;
   border-radius: 50%;
   background: white;
+  text-align: center;
   color: $footer-bg-color;
 
   i {
     vertical-align: middle;
-    font-size: 1.3rem;
-    line-height: 2.5rem;
+    font-size: 1.2rem;
+    line-height: $rss-icon-size;
   }
 }
 
 .site-footer .copyright {
   @include leader(1);
+}
+
+.source-code {
+  @include adjust-font-size-to($h5-font-size);
 }
