@@ -29,7 +29,7 @@
 
 <header class="site-header" role="banner">
   <div class="container">
-    <a class="site-title" href="http://mtrythall.com">
+    <a class="site-title" href="{{@blog.url}}">
       {{@blog.title}}
       <span class="tag">{{@blog.description}}</span>
     </a>
@@ -58,7 +58,7 @@
 <footer class="site-footer">
   <div class="container">
       <div class="aux-footer">
-        <a href="http://mtrythall.com/rss/" class="rss-icon">
+        <a href="{{@blog.url}}/rss/" class="rss-icon">
           <i class="fa fa-rss"> </i>
         </a>
       </div>
