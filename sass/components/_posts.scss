@@ -1,0 +1,31 @@
+/*
+ * POSTS (INDIVIDUAL)
+ *
+ */
+
+.post-list {
+  @include rhythm(2, 0, 0, 2);
+  @include bottomless;
+}
+
+.post-list .post {
+  @extend %container;
+  @extend %post-base;
+
+  @include rhythm(0, 0, 1, 1);
+
+  .post-header {
+    @include rhythm(0, 1, 1, 0);
+    width: auto;
+  }
+
+  .post-title {
+    @include leader(0);
+  }
+}
+
+.post-navigation {
+  @extend %container;
+  @include rhythm(1, 0, 0, 2);
+  text-align: center;
+}

@@ -34,3 +34,8 @@
 %sub-block-space {
   @include trailer(1);
 }
+
+%post-base {
+  padding: 1rem 1.5rem;
+  background-color: white;
+}

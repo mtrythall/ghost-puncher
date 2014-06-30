@@ -46,7 +46,7 @@
   height: $rss-icon-size;
   width: $rss-icon-size;
   border-radius: 50%;
-  background: white;
+  background: darken($footer-bg-color, 8%);
   text-align: center;
   color: $footer-bg-color;
 
@@ -55,10 +55,14 @@
     font-size: 1.2rem;
     line-height: $rss-icon-size;
   }
+
+  &:hover {
+    background: tomato;
+  }
 }
 
 .site-footer .copyright {
-  @include leader(1);
+  @include rhythm(1, 0, 0, 1);
 }
 
 .source-code {

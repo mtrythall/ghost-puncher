@@ -1,0 +1,44 @@
+/*
+ * POST VIEW
+ *
+ * Styles specific to the post view
+ *
+ */
+
+.post-header {
+  @extend %container;
+
+  @include rhythm(0, 2, 2, 0);
+  text-align: center;
+}
+
+.post-header .post-title {
+  @include trailer(.5);
+  font-weight: 800;
+
+  &, a {
+    text-decoration: none;
+    color: $footer-bg-color;
+  }
+
+  .post-template & {
+    @include adjust-font-size-to($base-font-size * 2.4);
+  }
+}
+
+.post-body {
+  @extend %container;
+  @extend %post-base;
+
+  @include padding-leader(1);
+  @include padding-trailer(1);
+
+  // Reset all headers to be a bit lighter
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+}
+
+.post-tags .headline {
+  font-weight: 700;
+}

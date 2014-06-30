@@ -60,7 +60,9 @@ code {
 code,
 kbd,
 pre,
-samp {
+samp,
+.post-body code[class*="language-"], // Overrides prism
+.post-body pre[class*="language-"] {
   font-family: $code-font-family;
 }
 

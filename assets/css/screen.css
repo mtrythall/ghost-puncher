@@ -74,7 +74,7 @@ body {
  * not defined on `summary` and `details` in IE and Firefox and on `main` in IE.
  */
 /* line 124, ../../sass/vendor/_normalize.scss */
-article,
+post,
 aside,
 details,
 figcaption,
@@ -689,11 +689,13 @@ code {
 code,
 kbd,
 pre,
-samp {
+samp,
+.post-body code[class*="language-"],
+.post-body pre[class*="language-"] {
   font-family: "Source Code Pro", monospace, serif;
 }
 
-/* line 67, ../../sass/_typography.scss */
+/* line 69, ../../sass/_typography.scss */
 abbr {
   font-variant: small-caps;
   font-weight: 600;
@@ -701,17 +703,17 @@ abbr {
   color: #a0a0a0;
 }
 
-/* line 75, ../../sass/_typography.scss */
+/* line 77, ../../sass/_typography.scss */
 abbr[title]:hover {
   cursor: help;
 }
 
-/* line 79, ../../sass/_typography.scss */
+/* line 81, ../../sass/_typography.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 83, ../../sass/_typography.scss */
+/* line 85, ../../sass/_typography.scss */
 blockquote:before {
   content: "\201C";
   display: inline-block;
@@ -758,6 +760,12 @@ blockquote:before {
  *  Best practices: http://www.sitepoint.com/sass-mixin-placeholder/
  */
 /* SHIMS, HELPERS */
+/* line 38, ../../sass/utils/_partials.scss */
+.post-list .post, .post-body {
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
 /*
  *  SHIMS
  *  
@@ -773,12 +781,12 @@ blockquote:before {
  *
  */
 /* line 6, ../../sass/common/_layout.scss */
-.container, .article-header, .article-body {
+.container, .post-list .post, .post-navigation, .post-header, .post-body {
   padding: 0 1rem;
 }
 @media (min-width: 840px) {
   /* line 6, ../../sass/common/_layout.scss */
-  .container, .article-header, .article-body {
+  .container, .post-list .post, .post-navigation, .post-header, .post-body {
     width: 760px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -974,7 +982,7 @@ hr {
   height: 2.2rem;
   width: 2.2rem;
   border-radius: 50%;
-  background: white;
+  background: #1b1b1b;
   text-align: center;
   color: #303030;
 }
@@ -984,14 +992,24 @@ hr {
   font-size: 1.2rem;
   line-height: 2.2rem;
 }
-
-/* line 60, ../../sass/common/_footer.scss */
-.site-footer .copyright {
-  margin-top: 30px;
-  margin-top: 1.36364rem;
+/* line 59, ../../sass/common/_footer.scss */
+.site-footer .rss-icon:hover {
+  background: tomato;
 }
 
 /* line 64, ../../sass/common/_footer.scss */
+.site-footer .copyright {
+  margin-top: 30px;
+  margin-top: 1.36364rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.36364rem;
+}
+
+/* line 68, ../../sass/common/_footer.scss */
 .source-code {
   font-size: 18px;
   font-size: 0.83rem;
@@ -1000,31 +1018,119 @@ hr {
 }
 
 /*
- * ARTICLE VIEW
- *
- * Styles specific to the article view
+ * POSTS (INDIVIDUAL)
  *
  */
-/* line 8, ../../sass/views/_article.scss */
-.article-header {
+/* line 6, ../../sass/components/_posts.scss */
+.post-list {
+  margin-top: 60px;
+  margin-top: 2.72727rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  margin-bottom: 60px;
+  margin-bottom: 2.72727rem;
+}
+/* line 87, ../../sass/utils/_mixins.scss */
+.post-list > *:last-child {
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+}
+
+/* line 11, ../../sass/components/_posts.scss */
+.post-list .post {
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 30px;
+  padding-bottom: 1.36364rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.36364rem;
+}
+/* line 17, ../../sass/components/_posts.scss */
+.post-list .post .post-header {
+  margin-top: 0px;
+  margin-top: 0rem;
+  padding-top: 30px;
+  padding-top: 1.36364rem;
+  padding-bottom: 30px;
+  padding-bottom: 1.36364rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  width: auto;
+}
+/* line 22, ../../sass/components/_posts.scss */
+.post-list .post .post-title {
+  margin-top: 0px;
+  margin-top: 0rem;
+}
+
+/* line 27, ../../sass/components/_posts.scss */
+.post-navigation {
+  margin-top: 30px;
+  margin-top: 1.36364rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  margin-bottom: 60px;
+  margin-bottom: 2.72727rem;
+  text-align: center;
+}
+
+/*
+ * POST VIEW
+ *
+ * Styles specific to the post view
+ *
+ */
+/* line 8, ../../sass/views/_post.scss */
+.post-header {
+  margin-top: 0px;
+  margin-top: 0rem;
   padding-top: 60px;
   padding-top: 2.72727rem;
   padding-bottom: 60px;
   padding-bottom: 2.72727rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
   text-align: center;
 }
 
-/* line 16, ../../sass/views/_article.scss */
-.article-header h1 {
+/* line 15, ../../sass/views/_post.scss */
+.post-header .post-title {
+  margin-bottom: 15px;
+  margin-bottom: 0.68182rem;
   font-weight: 800;
 }
-
-/* line 20, ../../sass/views/_article.scss */
-.article-body {
-  padding: 1rem 1.5rem;
-  background-color: white;
+/* line 19, ../../sass/views/_post.scss */
+.post-header .post-title, .post-header .post-title a {
+  text-decoration: none;
+  color: #303030;
 }
-/* line 27, ../../sass/views/_article.scss */
-.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
+/* line 24, ../../sass/views/_post.scss */
+.post-template .post-header .post-title {
+  font-size: 53px;
+  font-size: 2.4rem;
+  line-height: 60px;
+  line-height: 2.72727rem;
+}
+
+/* line 29, ../../sass/views/_post.scss */
+.post-body {
+  padding-top: 30px;
+  padding-top: 1.36364rem;
+  padding-bottom: 30px;
+  padding-bottom: 1.36364rem;
+}
+/* line 37, ../../sass/views/_post.scss */
+.post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
   font-weight: 600;
+}
+
+/* line 42, ../../sass/views/_post.scss */
+.post-tags .headline {
+  font-weight: 700;
 }

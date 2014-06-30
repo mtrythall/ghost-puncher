@@ -30,8 +30,12 @@
 <header class="site-header" role="banner">
   <div class="container">
     <a class="site-title" href="{{@blog.url}}">
-      {{@blog.title}}
-      <span class="tag">{{@blog.description}}</span>
+      {{#if @blog.logo}}
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      {{else}}
+        {{@blog.title}}
+        <span class="tag">{{@blog.description}}</span>
+      {{/if}}
     </a>
     <nav class="nav social-nav">
         <a href="https://twitter.com/mtrythall">
@@ -65,12 +69,12 @@
 
       <div class="primary-footer">
         <section class="copyright">
-            All content copyright <a href="mailto:m@mtrythall.com">Michael Trythall</a> &copy; 2014. All rights reserved.
+            &copy; <a href="mailto:m@mtrythall.com">Michael Trythall</a> 2014. All rights reserved.
         </section>
 
-        <p class="source-code">
+        <section class="source-code">
           <a href="https://github.com/mtrythall/ghost-puncher">Source code on Github</a>
-        </p>
+        </section>
       </div>
   </div>
 </footer>
